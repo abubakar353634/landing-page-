@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gisam 21V Cordless 3-in-1 Lawn Mower &amp; Trimmer</title>
+<meta name="description" content="21V brushless cordless mower, trimmer, and brush cutter in one — 48cm cutting path, 2 batteries included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:        #FAFAF7;
+    --bg-alt:    #EFF4EA;
+    --card:      #FFFFFF;
+    --border:    #E1E5DA;
+    --ink:       #161E18;
+    --ink-dim:   #5B6A5C;
+    --green:     #2F6B3C;
+    --green-dark:#1F4D29;
+    --green-soft:rgba(47,107,60,0.08);
+    --orange:    #F0791A;
+    --orange-dark:#CF6310;
+    --shadow:    0 26px 60px -24px rgba(22,30,24,0.18);
+    --ease: cubic-bezier(.2,.8,.2,1);
+    --container: 1160px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  section{ scroll-margin-top:80px; }
+
+  h1,h2,h3{ font-family:'Archivo',sans-serif; font-weight:900; letter-spacing:-0.01em; color:var(--ink); }
+  h1{ font-size:clamp(34px,5vw,54px); line-height:1.08; }
+  h2{ font-size:clamp(25px,3.2vw,34px); line-height:1.16; }
+  h3{ font-size:18px; line-height:1.3; }
+  .mono{ font-family:'JetBrains Mono',monospace; }
+  p{ color:var(--ink-dim); }
+  .container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 24px; }
+  .eyebrow{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--green); font-weight:700; }
+  :focus-visible{ outline:2px solid var(--orange); outline-offset:3px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; } }
+
+  /* ===================== BUTTONS ===================== */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; padding:15px 28px; border-radius:10px; cursor:pointer; border:1px solid transparent; transition:transform .12s var(--ease), filter .15s var(--ease); white-space:nowrap; }
+  .btn-primary{ color:#fff; background:linear-gradient(135deg, var(--orange), var(--orange-dark)); box-shadow:0 14px 26px -12px rgba(240,121,26,0.45); }
+  .btn-primary:hover{ filter:brightness(1.06); }
+  .btn-primary:active{ transform:translateY(3px); }
+  .btn-outline{ color:var(--ink); border-color:var(--border); background:transparent; }
+  .btn-outline:hover{ border-color:var(--green); color:var(--green); }
+  .btn-sm{ padding:11px 20px; font-size:12.5px; }
+  .btn-block{ width:100%; }
+
+  /* ===================== HEADER ===================== */
+  header{ position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(250,250,247,0.9); backdrop-filter:blur(8px); border-bottom:1px solid transparent; transition:border-color .2s; }
+  header.scrolled{ border-color:var(--border); }
+  .nav-wrap{ max-width:var(--container); margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{ font-family:'Archivo',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; gap:8px; }
+  .brand .dot{ width:9px; height:9px; border-radius:3px; background:var(--orange); }
+  .main-nav{ display:flex; gap:28px; }
+  .main-nav a{ font-size:13.5px; font-weight:600; color:var(--ink-dim); }
+  .main-nav a:hover{ color:var(--ink); }
+  .nav-toggle{ display:none; width:38px; height:38px; border-radius:10px; border:1px solid var(--border); background:var(--card); font-size:17px; align-items:center; justify-content:center; cursor:pointer; }
+
+  @media (max-width:880px){
+    .main-nav{ position:fixed; inset:62px 0 0 0; background:var(--bg); flex-direction:column; padding:24px; gap:2px; transform:translateY(-10px); opacity:0; pointer-events:none; transition:all .2s var(--ease); border-top:1px solid var(--border); }
+    .main-nav.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+    .main-nav a{ padding:14px 4px; border-bottom:1px solid var(--border); font-size:15px; }
+    .nav-toggle{ display:flex; }
+    .nav-right .btn-primary.desktop-only{ display:none; }
+  }
+
+  /* ===================== HERO ===================== */
+  .hero{ padding:140px 0 80px; }
+  .hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+  .hero-badge{ display:inline-flex; align-items:center; gap:9px; background:var(--green-soft); border:1px solid rgba(47,107,60,0.18); border-radius:50px; padding:7px 16px 7px 8px; font-size:12.5px; color:var(--green-dark); font-weight:600; margin-bottom:22px; }
+  .hero-badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--green); }
+  .hero h1{ margin-bottom:16px; }
+  .hero h1 .hi{ color:var(--orange); }
+  .hero .lead{ font-size:16px; max-width:460px; margin-bottom:26px; }
+  .price-row{ display:flex; align-items:baseline; gap:12px; margin-bottom:24px; }
+  .price-row .now{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:28px; color:var(--ink); }
+  .price-row .was{ font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--ink-dim); text-decoration:line-through; }
+  .price-row .save{ font-size:11.5px; font-weight:700; color:var(--green-dark); background:var(--green-soft); border:1px solid rgba(47,107,60,0.25); padding:4px 10px; border-radius:50px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+  .trust-line{ font-size:12.5px; color:var(--ink-dim); display:flex; gap:16px; flex-wrap:wrap; }
+
+  .photo-card{ border-radius:20px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border); background:var(--card); }
+  .photo-card img{ width:100%; height:100%; object-fit:cover; }
+
+  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } .hero{ padding-top:120px; } }
+
+  /* ===================== SPEC STRIP ===================== */
+  .spec-strip{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--bg-alt); }
+  .spec-strip .row{ display:flex; flex-wrap:wrap; gap:20px; padding:26px 0; justify-content:space-between; }
+  .spec-strip .item{ flex:1; min-width:140px; text-align:center; }
+  .spec-strip .item .v{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:17px; color:var(--green-dark); }
+  .spec-strip .item .l{ font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-dim); margin-top:3px; }
+
+  /* ===================== SECTION SHELLS ===================== */
+  .section{ padding:90px 0; }
+  .section-alt{ background:var(--bg-alt); }
+  .section-head{ max-width:580px; margin-bottom:42px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{ margin-top:8px; }
+  .section-head p{ margin-top:12px; font-size:15px; }
+
+  .feature-row{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+  .feature-row.reverse .img-col{ order:2; }
+  @media (max-width:880px){ .feature-row{ grid-template-columns:1fr; } .feature-row.reverse .img-col{ order:0; } }
+
+  .fact-list{ margin-top:18px; }
+  .fact-list li{ display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; font-size:14.5px; color:var(--ink); }
+  .fact-list li .ck{ flex:0 0 auto; width:20px; height:20px; border-radius:50%; background:var(--green-soft); color:var(--green-dark); font-size:12px; display:flex; align-items:center; justify-content:center; font-weight:700; margin-top:1px; }
+
+  /* ===================== GRIDS / CARDS ===================== */
+  .grid{ display:grid; gap:18px; }
+  .grid-2{ grid-template-columns:repeat(2,1fr); }
+  .grid-3{ grid-template-columns:repeat(3,1fr); }
+  .grid-4{ grid-template-columns:repeat(4,1fr); }
+  @media (max-width:880px){ .grid-3,.grid-4{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .grid-2,.grid-3,.grid-4{ grid-template-columns:1fr; } }
+
+  .mini-card{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px; }
+  .mini-card .v{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:20px; color:var(--orange); }
+  .mini-card .l{ font-size:12.5px; color:var(--ink-dim); margin-top:6px; }
+
+  /* ===================== MODE CARDS (3-in-1) ===================== */
+  .mode-card{ background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden; transition:transform .15s var(--ease), border-color .15s; }
+  .mode-card:hover{ transform:translateY(-3px); border-color:var(--green); }
+  .mode-card .tag{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--orange); background:rgba(240,121,26,0.1); padding:4px 10px; border-radius:50px; margin-bottom:10px; }
+  .mode-card .body{ padding:20px; }
+  .mode-card p{ font-size:13.5px; }
+
+  /* ===================== BOX CONTENTS ===================== */
+  .box-list li{ display:flex; gap:10px; font-size:14px; color:var(--ink); padding:9px 0; border-bottom:1px solid var(--border); }
+  .box-list li:last-child{ border-bottom:none; }
+  .box-list li .n{ color:var(--orange); font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; }
+
+  /* ===================== REVIEWS ===================== */
+  .review-card{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px; }
+  .stars{ color:var(--orange); font-size:14px; margin-bottom:10px; letter-spacing:2px; }
+  .review-card p{ font-size:14px; color:var(--ink); margin-bottom:12px; }
+  .reviewer{ display:flex; align-items:center; gap:10px; }
+  .avatar{ width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,var(--green),var(--orange)); flex:0 0 auto; }
+  .reviewer .name{ font-size:12.5px; font-weight:700; color:var(--ink); }
+  .reviewer .meta{ font-size:11px; color:var(--ink-dim); }
+
+  /* ===================== FAQ ===================== */
+  .faq-item{ border-bottom:1px solid var(--border); }
+  .faq-q{ width:100%; background:none; border:none; color:var(--ink); font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; text-align:left; padding:18px 4px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px; }
+  .faq-q .ic{ flex:0 0 auto; font-size:18px; color:var(--orange); transition:transform .2s var(--ease); }
+  .faq-item.open .faq-q .ic{ transform:rotate(45deg); }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .25s var(--ease); }
+  .faq-a p{ padding:0 4px 18px; font-size:14px; }
+
+  /* ===================== PRICING ===================== */
+  .price-card{ background:var(--card); border:2px solid var(--border); border-radius:16px; padding:24px; text-align:center; position:relative; }
+  .price-card.featured{ border-color:var(--orange); box-shadow:0 0 0 3px rgba(240,121,26,0.12); }
+  .price-card .badge{ position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--orange); color:#fff; font-size:11px; font-weight:700; padding:4px 12px; border-radius:50px; white-space:nowrap; }
+  .price-card .name{ font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; margin-bottom:10px; }
+  .price-card .amt{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:30px; color:var(--ink); }
+  .price-card .was2{ font-family:'JetBrains Mono',monospace; font-size:14px; color:var(--ink-dim); text-decoration:line-through; margin-left:6px; }
+  .price-card ul{ text-align:left; margin:18px 0; }
+  .price-card ul li{ font-size:13.5px; color:var(--ink-dim); padding:6px 0; display:flex; gap:8px; }
+  .price-card ul li .ck{ color:var(--green); font-weight:700; }
+
+  .countdown{ display:flex; gap:10px; justify-content:center; margin:22px 0; }
+  .countdown .seg{ background:var(--card); border:1px solid var(--border); border-radius:12px; padding:10px 14px; text-align:center; min-width:62px; }
+  .countdown .seg .n{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:19px; color:var(--orange); }
+  .countdown .seg .u{ font-size:10px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:.05em; }
+
+  /* ===================== STICKY BUY BAR ===================== */
+  .sticky-bar{ position:fixed; bottom:0; left:0; right:0; z-index:190; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-top:1px solid var(--border); padding:14px 20px; transform:translateY(110%); transition:transform .25s var(--ease); box-shadow:0 -10px 30px -20px rgba(0,0,0,0.2); }
+  .sticky-bar.show{ transform:translateY(0); }
+  .sticky-bar .row{ max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .sticky-bar .info{ display:flex; align-items:center; gap:12px; }
+  .sticky-bar .swatch{ width:34px; height:34px; border-radius:9px; overflow:hidden; flex:0 0 auto; }
+  .sticky-bar .swatch img{ width:100%; height:100%; object-fit:cover; }
+  .sticky-bar .name{ font-family:'Archivo',sans-serif; font-weight:800; font-size:13.5px; }
+  .sticky-bar .p{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-dim); }
+
+  /* ===================== FOOTER ===================== */
+  footer{ border-top:1px solid var(--border); background:var(--bg-alt); padding:48px 0 90px; }
+  .footer-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:28px; }
+  .footer-brand p{ font-size:13px; max-width:280px; margin-top:8px; }
+  .footer-links{ display:flex; gap:30px; flex-wrap:wrap; }
+  .footer-links a{ font-size:13.5px; color:var(--ink-dim); }
+  .footer-links a:hover{ color:var(--ink); }
+  .footer-bottom{ border-top:1px solid var(--border); padding-top:18px; font-size:12px; color:var(--ink-dim); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .built-by a{ color:var(--green-dark); font-weight:600; }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s var(--ease), transform .5s var(--ease); }
+  .reveal.visible{ opacity:1; transform:translateY(0); }
+
+  .toast{ position:fixed; bottom:96px; left:50%; transform:translateX(-50%) translateY(16px); background:var(--ink); color:#fff; font-size:13.5px; padding:12px 20px; border-radius:50px; box-shadow:var(--shadow); opacity:0; transition:all .25s var(--ease); pointer-events:none; max-width:90vw; text-align:center; z-index:300; }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     DEMO LANDING PAGE — real product photos, placeholder price.
+     Search for data-cta and "TODO" to find what to swap before
+     using this on a live store: real price, checkout link, and
+     your own review content.
+============================================================ -->
+
+<header id="siteHeader">
+  <div class="nav-wrap">
+    <a href="#" class="brand"><span class="dot"></span> GISAM</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#power">Power</a>
+      <a href="#modes">3-in-1</a>
+      <a href="#adjust">Adjustability</a>
+      <a href="#box">In The Box</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#pricing" class="btn btn-primary btn-sm desktop-only">Shop Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge"><span class="dot"></span> 21V Brushless · 2 Batteries Included</span>
+        <h1>Your whole yard. <span class="hi">One cordless tool.</span></h1>
+        <p class="lead">A 3500W brushless mower, trimmer, and brush cutter in one — swap heads in seconds, no gas, no cord, no second tool to buy.</p>
+        <div class="price-row">
+          <span class="now mono">$129.99</span>
+          <span class="was mono">$179.99</span>
+          <span class="save">Save $50</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary" data-cta="hero-buy">Shop Gisam 21V</a>
+          <a href="#power" class="btn btn-outline">See How It Works</a>
+        </div>
+        <div class="trust-line">
+          <span>★★★★★ 4.7/5 rating</span>
+          <span>Free shipping</span>
+          <span>2 batteries included</span>
+        </div>
+      </div>
+      <div class="photo-card reveal" id="heroCtaAnchor">
+        <img src="img/hero-action.jpg" alt="Gisam 21V cordless trimmer being used on a lawn, clearing thick grass">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPEC STRIP ===================== -->
+  <div class="spec-strip">
+    <div class="container row">
+      <div class="item"><div class="v">3500W</div><div class="l">Brushless Motor</div></div>
+      <div class="item"><div class="v">48cm</div><div class="l">Cutting Path</div></div>
+      <div class="item"><div class="v">2× 4.0Ah</div><div class="l">Batteries Included</div></div>
+      <div class="item"><div class="v">60–100min</div><div class="l">Runtime / Charge</div></div>
+    </div>
+  </div>
+
+  <!-- ===================== CUTTING PATH COMPARE ===================== -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="feature-row">
+        <div class="reveal">
+          <span class="eyebrow">Why Upgrade</span>
+          <h2>Nearly 5× the cutting path of a standard trimmer</h2>
+          <p style="margin-top:12px;">Most cordless trimmers cut a 10-inch path and leave you walking the yard twice. The Gisam's 48cm (18.9-inch) wheeled deck covers almost the whole width in a single pass.</p>
+          <ul class="fact-list">
+            <li><span class="ck">✓</span> 48cm / 18.9in cutting width on the wheeled base</li>
+            <li><span class="ck">✓</span> Rated 95% more efficient than a standard 10in trimmer</li>
+            <li><span class="ck">✓</span> Fewer passes means less time and less battery used per session</li>
+          </ul>
+        </div>
+        <div class="photo-card reveal">
+          <img src="img/cutting-path-compare.jpg" alt="Comparison of the Gisam's 48cm cutting path against a standard 10-inch trimmer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3-IN-1 MODES ===================== -->
+  <section class="section section-alt" id="modes">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">One Tool, Three Jobs</span>
+        <h2>Mower, trimmer, and brush cutter — same motor</h2>
+        <p>Swap the cutting head and the same 21V motor handles whichever job is in front of you.</p>
+      </div>
+      <div class="grid grid-3" data-reveal-group>
+        <div class="mode-card reveal">
+          <div class="body">
+            <span class="tag">Mode 01</span>
+            <h3>Wheeled Mower</h3>
+            <p>Drop it onto the 4-wheel base for an even, guided cut across open lawn — 3 height settings from 4cm to 7cm.</p>
+          </div>
+        </div>
+        <div class="mode-card reveal">
+          <div class="body">
+            <span class="tag">Mode 02</span>
+            <h3>Handheld Trimmer</h3>
+            <p>Lift it off the base and extend the telescopic shaft (110–128cm) for edges, fence lines, and tight corners.</p>
+          </div>
+        </div>
+        <div class="mode-card reveal">
+          <div class="body">
+            <span class="tag">Mode 03</span>
+            <h3>Brush Cutter</h3>
+            <p>Switch to the 40-tooth steel blade for overgrown weeds and thicker brush the trimmer line can't chew through.</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card reveal" style="margin-top:28px;">
+        <img src="img/versatility-kit.jpg" alt="Gisam trimmer shown in both handheld and wheeled configurations with all included accessories">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POWER ===================== -->
+  <section class="section" id="power">
+    <div class="container">
+      <div class="feature-row reverse">
+        <div class="img-col photo-card reveal">
+          <img src="img/brushless-motor.jpg" alt="Cutaway view of the Gisam 3500W brushless motor">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Under The Hood</span>
+          <h2>A brushless motor built to outlast brushed ones</h2>
+          <p style="margin-top:12px;">No carbon brushes means less friction, less heat, and a lot less to wear out over time.</p>
+          <div class="grid grid-2" style="margin-top:20px;">
+            <div class="mini-card"><div class="v">15,000</div><div class="l">RPM, max speed</div></div>
+            <div class="mini-card"><div class="v">3500W</div><div class="l">Peak motor output</div></div>
+            <div class="mini-card"><div class="v">Low</div><div class="l">Noise &amp; vibration</div></div>
+            <div class="mini-card"><div class="v">Low</div><div class="l">Maintenance needs</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BATTERY ===================== -->
+  <section class="section section-alt" id="battery">
+    <div class="container">
+      <div class="feature-row">
+        <div class="reveal">
+          <span class="eyebrow">Power To Finish The Job</span>
+          <h2>Two batteries, so you're never waiting on a charge</h2>
+          <p style="margin-top:12px;">Each 4000mAh battery delivers 60–100 minutes of runtime depending on the cutting load. Swap to the second pack and keep going while the first one charges.</p>
+          <ul class="fact-list">
+            <li><span class="ck">✓</span> 2× 21V 4.0Ah batteries included in every box</li>
+            <li><span class="ck">✓</span> 1–1.5 hour fast charge per battery</li>
+            <li><span class="ck">✓</span> Up to ~200 minutes combined runtime per full charge cycle</li>
+          </ul>
+        </div>
+        <div class="photo-card reveal">
+          <img src="img/battery-detail.jpg" alt="Gisam 4000mAh rechargeable battery, two included per kit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ADJUSTABILITY ===================== -->
+  <section class="section" id="adjust">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Built To Fit You</span>
+        <h2>Height, angle, and reach — all adjustable</h2>
+      </div>
+      <div class="grid grid-2" data-reveal-group>
+        <div class="reveal">
+          <div class="photo-card"><img src="img/height-adjust.jpg" alt="Three cutting height settings: 4cm, 5.5cm, and 7cm"></div>
+          <h3 style="margin-top:16px;">3-stage cutting height</h3>
+          <p style="margin-top:6px; font-size:14px;">4cm / 5.5cm / 7cm — dial in exactly how short you want the lawn.</p>
+        </div>
+        <div class="reveal">
+          <div class="photo-card"><img src="img/angle-adjust.jpg" alt="Cutting head angle adjustable from 20 to 80 degrees"></div>
+          <h3 style="margin-top:16px;">20°–80° head angle</h3>
+          <p style="margin-top:6px; font-size:14px;">Tilt the head to reach under benches, along borders, and on slopes without bending over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SAFETY ===================== -->
+  <section class="section section-alt" id="safety">
+    <div class="container">
+      <div class="feature-row reverse">
+        <div class="img-col photo-card reveal">
+          <img src="img/safety-features.jpg" alt="Double-lock safety switch and protective debris cover on the Gisam trimmer">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Safe By Design</span>
+          <h2>No accidental starts, no clippings in your face</h2>
+          <ul class="fact-list" style="margin-top:18px;">
+            <li><span class="ck">✓</span> Double-lock start — both switches must be pressed together</li>
+            <li><span class="ck">✓</span> Protective cover keeps grass clippings from flying back at you</li>
+            <li><span class="ck">✓</span> 90° adjustable cutting head for awkward angles without strain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOX CONTENTS ===================== -->
+  <section class="section" id="box">
+    <div class="container">
+      <div class="feature-row">
+        <div class="reveal">
+          <span class="eyebrow">Everything Included</span>
+          <h2>What's in the box</h2>
+          <ul class="box-list" style="margin-top:18px;">
+            <li><span class="n">01</span> Gisam 21V cordless head unit</li>
+            <li><span class="n">02</span> 4-wheel mower base</li>
+            <li><span class="n">03</span> 2× 21V 4.0Ah batteries</li>
+            <li><span class="n">04</span> Charger</li>
+            <li><span class="n">05</span> 40-tooth steel brush-cutter blade</li>
+            <li><span class="n">06</span> 2× plastic cutting blades</li>
+            <li><span class="n">07</span> 4× spare trimmer line spools (4×3m)</li>
+            <li><span class="n">08</span> Allen wrench &amp; install tool</li>
+          </ul>
+        </div>
+        <div class="photo-card reveal">
+          <img src="img/box-contents.jpg" alt="Full Gisam kit contents including batteries, charger, blades, and spare trimmer line">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <!-- Demo placeholder reviews — replace with real customer reviews before going live. -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">From Real Yards</span>
+        <h2>What people are saying</h2>
+      </div>
+      <div class="grid grid-3" data-reveal-group>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Cut my whole back lawn in one battery and still had charge left for the edges. The wheeled base makes it genuinely easy to push straight lines."</p>
+          <div class="reviewer"><div class="avatar"></div><div><div class="name">Daniel M.</div><div class="meta">Verified buyer</div></div></div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Switched to the metal blade for a patch of overgrown weeds near the fence — handled it without bogging down at all."</p>
+          <div class="reviewer"><div class="avatar"></div><div><div class="name">Aisha R.</div><div class="meta">Verified buyer</div></div></div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★☆</div>
+          <p>"Lighter than I expected once it's off the wheeled base. Took a minute to get used to switching attachments but it's straightforward."</p>
+          <div class="reviewer"><div class="avatar"></div><div><div class="name">Tom H.</div><div class="meta">Verified buyer</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container" style="max-width:680px;">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Before you ask</h2>
+      </div>
+      <div class="reveal" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q"><span>How long does one battery actually last?</span><span class="ic">+</span></button>
+          <div class="faq-a"><p>60 to 100 minutes depending on grass thickness and which cutting head you're using. With both batteries included, most yards only need one swap at most.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can I use it as just a handheld trimmer, without the wheels?</span><span class="ic">+</span></button>
+          <div class="faq-a"><p>Yes — lift the head off the wheeled base and extend the telescopic shaft (110–128cm) for a standard handheld trimmer setup.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>What's the metal blade for?</span><span class="ic">+</span></button>
+          <div class="faq-a"><p>The included 40-tooth steel blade is for thicker weeds and brush that the standard trimmer line struggles with — swap it in when the grass gets out of hand.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>How long does charging take?</span><span class="ic">+</span></button>
+          <div class="faq-a"><p>1 to 1.5 hours per battery with the included charger. Charge one while you use the other.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Is it heavy to push around the lawn?</span><span class="ic">+</span></button>
+          <div class="faq-a"><p>The 4-wheel base is designed to carry the weight and guide the cut, so you're mostly steering rather than lifting.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Limited Launch Pricing</span>
+        <h2>One kit. Everything included.</h2>
+        <p>Launch pricing — goes back to $179.99 once the timer hits zero.</p>
+      </div>
+
+      <div class="countdown reveal" id="countdown">
+        <div class="seg"><div class="n" id="cd-h">47</div><div class="u">Hours</div></div>
+        <div class="seg"><div class="n" id="cd-m">59</div><div class="u">Min</div></div>
+        <div class="seg"><div class="n" id="cd-s">59</div><div class="u">Sec</div></div>
+      </div>
+
+      <div class="grid grid-3" data-reveal-group style="max-width:760px; margin:0 auto 30px;">
+        <div class="price-card reveal"></div>
+        <div class="price-card featured reveal">
+          <div class="badge">Best Value</div>
+          <div class="name">Complete Kit</div>
+          <div class="amt">$129.99<span class="was2">$179.99</span></div>
+          <ul>
+            <li><span class="ck">✓</span> Mower base + trimmer + brush cutter</li>
+            <li><span class="ck">✓</span> 2× batteries &amp; charger</li>
+            <li><span class="ck">✓</span> All blades &amp; spare line included</li>
+            <li><span class="ck">✓</span> Free shipping, 2-year warranty</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block" data-cta="pricing-buy">Get the Complete Kit</a>
+        </div>
+        <div class="price-card reveal"></div>
+      </div>
+      <p style="text-align:center; font-size:12.5px;">TODO: replace $129.99 with your real price and connect the button to your Shopify checkout.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== STICKY BUY BAR ===================== -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="row">
+    <div class="info">
+      <div class="swatch"><img src="img/hero-action.jpg" alt=""></div>
+      <div><div class="name">Gisam 21V Complete Kit</div><div class="p">$129.99</div></div>
+    </div>
+    <a href="#pricing" class="btn btn-primary btn-sm" data-cta="sticky-buy">Shop Now</a>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand"><span class="dot"></span> GISAM</a>
+        <p>21V cordless lawn care, built to handle mowing, trimming, and brush cutting with one battery system.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#power">Power</a>
+        <a href="#modes">3-in-1</a>
+        <a href="#box">In The Box</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Gisam — demo landing page, not a live store.</span>
+      <span class="built-by">⚡ Crafted by <a href="mailto:abubakar47470@gmail.com">Abu Bakar Farid</a> — available for Shopify &amp; landing page projects</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var header = document.getElementById("siteHeader");
+  function onScroll(){ header.classList.toggle("scrolled", window.scrollY > 20); }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  var navToggle = document.getElementById("navToggle");
+  var mainNav = document.getElementById("mainNav");
+  navToggle.addEventListener("click", function(){
+    var open = mainNav.classList.toggle("open");
+    navToggle.textContent = open ? "✕" : "☰";
+  });
+  mainNav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ mainNav.classList.remove("open"); navToggle.textContent = "☰"; });
+  });
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("visible"); io.unobserve(en.target); } });
+    }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+  document.querySelectorAll("[data-reveal-group]").forEach(function(group){
+    group.querySelectorAll(".reveal").forEach(function(el,i){ el.style.transitionDelay = (i*60)+"ms"; });
+  });
+
+  document.querySelectorAll(".faq-item").forEach(function(item){
+    var q = item.querySelector(".faq-q"), a = item.querySelector(".faq-a");
+    q.addEventListener("click", function(){
+      var isOpen = item.classList.contains("open");
+      item.classList.toggle("open", !isOpen);
+      a.style.maxHeight = isOpen ? "0px" : a.scrollHeight + "px";
+    });
+  });
+
+  var stickyBar = document.getElementById("stickyBar");
+  var heroAnchor = document.getElementById("heroCtaAnchor");
+  if (heroAnchor){
+    var barObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        stickyBar.classList.toggle("show", !en.isIntersecting && en.boundingClientRect.top < 0);
+      });
+    }, {threshold:0});
+    barObs.observe(heroAnchor);
+  }
+
+  /* Relative demo countdown — replace with a fixed server-controlled date for a real campaign. */
+  var totalSeconds = 47*3600 + 59*60 + 59;
+  var cdH = document.getElementById("cd-h"), cdM = document.getElementById("cd-m"), cdS = document.getElementById("cd-s");
+  function tick(){
+    if (totalSeconds > 0) totalSeconds--;
+    cdH.textContent = String(Math.floor(totalSeconds/3600)).padStart(2,"0");
+    cdM.textContent = String(Math.floor((totalSeconds%3600)/60)).padStart(2,"0");
+    cdS.textContent = String(totalSeconds%60).padStart(2,"0");
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  function toast(msg, ms){
+    var t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ t.classList.remove("show"); }, ms || 2600);
+  }
+  document.querySelectorAll("[data-cta]").forEach(function(el){
+    el.addEventListener("click", function(e){
+      e.preventDefault();
+      toast("Demo only — connect this button to your real Shopify checkout link.");
+    });
+  });
+})();
+</script>
+</body>
+</html>
